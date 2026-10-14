@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>바이브코딩 웹·앱 수업 시작</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 상단 안내 바 -->
+  <div class="topbar">
+    <div class="container">
+      <p>📢 2026 바이브코딩 웹 · 앱 홈페이지 제작 과정이 시작되었습니다!</p>
+      <p class="topbar-right">수업 시작 후 <strong id="dday">D+0</strong></p>
+    </div>
+  </div>
+
+  <!-- 헤더 -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">☁ Vibe<span>Coding</span></a>
+
+      <nav class="gnb" id="gnb">
+        <a href="#home" class="active">홈</a>
+        <a href="#about">과정 소개</a>
+        <a href="#today">오늘의 수업</a>
+        <a href="#curriculum">커리큘럼</a>
+        <a href="#notice">공지사항</a>
+      </nav>
+
+      <a href="#today" class="header-btn">수업 시작하기</a>
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 메인 배너 -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">2026. 10. 14 · DAY 1</p>
+          <h1>
+            바이브코딩으로<br>
+            <span class="highlight" id="typing"></span><span class="cursor">|</span>
+          </h1>
+          <p class="hero-desc">
+            AI 파트너 Claude와 함께 HTML · CSS · JavaScript로<br>
+            나만의 웹 · 앱 홈페이지를 직접 만들어 봅니다.
+          </p>
+          <div class="hero-btns">
+            <a href="#today" class="btn">오늘의 수업 보기</a>
+            <a href="#curriculum" class="btn outline">커리큘럼 보기</a>
+          </div>
+        </div>
+
+        <!-- 브라우저 모양 일러스트 -->
+        <div class="browser">
+          <div class="browser-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <div class="address">https://나의-첫-홈페이지.com</div>
+          </div>
+          <pre class="code" id="code"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 과정 소개 -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">ABOUT</p>
+          <h2>과정 소개</h2>
+          <p>코딩이 처음이어도 괜찮아요. AI와 대화하며 하나씩 만들어 갑니다.</p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="feature-icon">💬</div>
+            <h3>말로 만드는 코딩</h3>
+            <p>원하는 화면을 말로 설명하면 Claude가 코드를 함께 만들어 줍니다.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🖥️</div>
+            <h3>웹과 앱을 한 번에</h3>
+            <p>PC와 휴대폰 어디서나 보기 좋은 반응형 홈페이지를 만듭니다.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚀</div>
+            <h3>인터넷에 공개까지</h3>
+            <p>GitHub로 저장하고 배포해서 나만의 주소로 공유합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 오늘의 수업 -->
+    <section class="section bg-sky" id="today">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">TODAY</p>
+          <h2>오늘의 수업 · Day 1</h2>
+          <p>개발 환경을 준비하고 첫 웹 페이지를 만들었어요. 완료한 항목을 체크해 보세요.</p>
+        </div>
+
+        <div class="today-grid">
+          <ul class="checklist" id="checklist">
+            <li data-id="claude">
+              <span class="box"></span>
+              <div>
+                <h3>Claude 다운로드</h3>
+                <p>AI와 함께 코드를 만드는 바이브코딩 파트너</p>
+              </div>
+            </li>
+            <li data-id="github">
+              <span class="box"></span>
+              <div>
+                <h3>GitHub 다운로드</h3>
+                <p>내 코드를 저장하고 버전을 관리하는 곳</p>
+              </div>
+            </li>
+            <li data-id="html">
+              <span class="box"></span>
+              <div>
+                <h3>첫 HTML 페이지 만들기</h3>
+                <p>HTML · CSS · JavaScript로 시작 페이지 완성</p>
+              </div>
+            </li>
+          </ul>
+
+          <aside class="summary-box">
+            <h3>오늘의 진행률</h3>
+            <div class="ring">
+              <svg viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+                <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <span id="percent">0%</span>
+            </div>
+
+            <h4>사용한 기술</h4>
+            <div class="tags">
+              <span>HTML · 뼈대</span>
+              <span>CSS · 디자인</span>
+              <span>JavaScript · 움직임</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 커리큘럼 -->
+    <section class="section" id="curriculum">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">CURRICULUM</p>
+          <h2>다음에 배울 것</h2>
+          <p>각 수업을 클릭하면 자세한 내용을 볼 수 있어요.</p>
+        </div>
+
+        <div class="tabs" id="tabs">
+          <button class="active" data-filter="all">전체</button>
+          <button data-filter="web">웹 기초</button>
+          <button data-filter="ai">바이브코딩</button>
+          <button data-filter="deploy">배포 · 앱</button>
+        </div>
+
+        <div class="lesson-list" id="lessons"></div>
+      </div>
+    </section>
+
+    <!-- 공지사항 -->
+    <section class="section bg-sky" id="notice">
+      <div class="container">
+        <div class="section-head">
+          <p class="label">NOTICE</p>
+          <h2>공지사항</h2>
+        </div>
+
+        <table class="board">
+          <thead>
+            <tr>
+              <th class="col-no">번호</th>
+              <th>제목</th>
+              <th class="col-date">날짜</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-no"><span class="pin">공지</span></td>
+              <td>바이브코딩 웹 · 앱 홈페이지 제작 과정 개강 안내</td>
+              <td class="col-date">2026.10.14</td>
+            </tr>
+            <tr>
+              <td class="col-no">3</td>
+              <td>2차시 준비물: 노트북, GitHub 계정, 만들고 싶은 홈페이지 아이디어</td>
+              <td class="col-date">2026.10.14</td>
+            </tr>
+            <tr>
+              <td class="col-no">2</td>
+              <td>GitHub 가입 및 설치 방법 안내</td>
+              <td class="col-date">2026.10.14</td>
+            </tr>
+            <tr>
+              <td class="col-no">1</td>
+              <td>Claude 다운로드 및 첫 실행 방법</td>
+              <td class="col-date">2026.10.14</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#home" class="logo">☁ Vibe<span>Coding</span></a>
+        <p>AI와 함께 만드는 나의 첫 홈페이지</p>
+      </div>
+      <div>
+        <h4>바로가기</h4>
+        <a href="#about">과정 소개</a>
+        <a href="#today">오늘의 수업</a>
+        <a href="#curriculum">커리큘럼</a>
+      </div>
+      <div>
+        <h4>수업 정보</h4>
+        <p>개강일 : 2026년 10월 14일</p>
+        <p>사용 기술 : HTML · CSS · JavaScript</p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 VibeCoding. “시작이 반이다”</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
